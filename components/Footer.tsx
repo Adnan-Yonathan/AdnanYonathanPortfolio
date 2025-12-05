@@ -9,9 +9,12 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Adnan Yonathan. Always building.
             </p>
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             <a href="#about" className="text-sm text-neutral-400 hover:text-white transition-colors">
               About
+            </a>
+            <a href="#journey" className="text-sm text-neutral-400 hover:text-white transition-colors">
+              Journey
             </a>
             <a href="#projects" className="text-sm text-neutral-400 hover:text-white transition-colors">
               Projects

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { ExternalLink } from 'lucide-react'
 
 const ventures = [
   {
@@ -10,24 +11,28 @@ const ventures = [
     title: 'AI Consulting for Law Firms',
     description:
       'Helping law firms integrate AI and automation into their workflows. Focused on document processing, client intake, and operational efficiency.',
+    link: 'https://opspilot.legal/',
   },
   {
     number: '02',
-    title: 'Local Marketing Agency',
+    title: '7th Street Marketing',
     description:
       'Digital marketing and customer acquisition for local businesses. From SEO to paid ads, helping small businesses compete online.',
+    link: 'https://7thstreetmarketing.com/',
   },
   {
     number: '03',
     title: 'Content & Community',
     description:
       'Building in public on YouTube and Twitter. Documenting the journey and teaching others how to build and ship products.',
+    link: null,
   },
   {
     number: '04',
     title: 'Sports Analytics R&D',
     description:
-      'Researching and developing predictive models for sports betting. The foundation for Delta AI\'s intelligence layer.',
+      'Researching and developing predictive models for sports betting. The foundation for Delta Sports\' intelligence layer.',
+    link: null,
   },
 ]
 
@@ -68,9 +73,21 @@ export default function Ventures() {
               {/* Left line on hover */}
               <div className="absolute top-0 left-0 w-1 h-full bg-white opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <span className="text-sm font-bold text-neutral-500 mb-4 block">
-                {venture.number}
-              </span>
+              <div className="flex items-start justify-between mb-4">
+                <span className="text-sm font-bold text-neutral-500">
+                  {venture.number}
+                </span>
+                {venture.link && (
+                  <a
+                    href={venture.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-500 hover:text-white transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
+              </div>
               <h3 className="text-xl font-semibold mb-3">{venture.title}</h3>
               <p className="text-sm text-neutral-400 leading-relaxed">
                 {venture.description}
