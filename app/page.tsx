@@ -2,6 +2,7 @@ import {
   Navigation,
   Hero,
   About,
+  Timeline,
   Projects,
   Ventures,
   Contact,
@@ -14,6 +15,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
+      <Timeline />
       <Projects />
       <Ventures />
       <Contact />

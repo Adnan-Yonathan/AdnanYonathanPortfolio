@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Triangle, GraduationCap, LayoutGrid, Check } from 'lucide-react'
+import { Triangle, GraduationCap, LayoutGrid, Check, ExternalLink } from 'lucide-react'
 
 const projects = [
   {
@@ -13,7 +13,7 @@ const projects = [
     iconColor: 'text-white',
     iconBg: 'bg-white/10',
     tags: ['AI', 'Sports', 'Analytics'],
-    title: 'Delta AI',
+    title: 'Delta Sports',
     description:
       'Building the sports betting intelligence layer. A conversational AI platform that combines real-time odds tracking, statistical analysis, and predictive insights. Think StatMuse meets ChatGPT—ask anything and get data-driven answers instantly.',
     features: [
@@ -25,6 +25,7 @@ const projects = [
     status: 'In Active Development',
     statusColor: 'text-white',
     statusDotColor: 'bg-white',
+    link: null,
   },
   {
     id: 'education',
@@ -32,7 +33,7 @@ const projects = [
     iconColor: 'text-white',
     iconBg: 'bg-white/10',
     tags: ['Education', 'No-Code'],
-    title: 'No-Code App Academy',
+    title: 'Makers Studio',
     description:
       'Teaching non-technical founders how to build, ship, and market apps without code. Launched with a free lifetime access offer and hit 51 signups in the first few days—zero paid marketing.',
     metrics: [
@@ -42,6 +43,7 @@ const projects = [
     status: 'Live & Growing',
     statusColor: 'text-white',
     statusDotColor: 'bg-white',
+    link: 'https://makersstudio.lovable.app/',
   },
   {
     id: 'saas',
@@ -61,6 +63,7 @@ const projects = [
     status: 'Multiple Live Products',
     statusColor: 'text-neutral-400',
     statusDotColor: 'bg-neutral-400',
+    link: null,
   },
 ]
 
@@ -167,12 +170,23 @@ export default function Projects() {
                 </ul>
               )}
 
-              {/* Status */}
-              <div className="pt-4 border-t border-border">
+              {/* Status & Link */}
+              <div className="pt-4 border-t border-border flex items-center justify-between">
                 <span className={`inline-flex items-center gap-2 text-sm ${project.statusColor}`}>
                   <span className={`w-2 h-2 rounded-full ${project.statusDotColor} animate-pulse`} />
                   {project.status}
                 </span>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition-colors"
+                  >
+                    Visit Site
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}
