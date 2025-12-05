@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden" ref={ref}>
       {/* Background gradient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.1)_0%,transparent_60%)]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02)_0%,transparent_60%)]" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
@@ -29,12 +29,13 @@ export default function Contact() {
           className="text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-            Let&apos;s build
+            Let&apos;s connect
             <br />
-            <span className="gradient-text">something together.</span>
+            <span className="gradient-text">and build together.</span>
           </h2>
-          <p className="text-lg text-zinc-400 max-w-xl mx-auto mb-10">
-            Whether you want to collaborate on a project, learn how to build apps, or just connect - I&apos;m always open to new opportunities.
+          <p className="text-lg text-neutral-400 max-w-xl mx-auto mb-10">
+            Looking for collaborators, advisors, or just interesting people to talk to.
+            Whether it&apos;s about startups, AI, or competitive gaming—I&apos;m always down to chat.
           </p>
 
           {/* Email Button */}
@@ -46,10 +47,10 @@ export default function Contact() {
           >
             <a
               href="mailto:contact@adnanyonathan.com"
-              className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white gradient-bg rounded-lg shadow-lg hover:shadow-accent-1/25 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold bg-white text-black rounded-lg hover:bg-neutral-200 transition-all hover:-translate-y-0.5"
             >
               <Mail className="w-5 h-5" />
-              Send an Email
+              Get in Touch
             </a>
           </motion.div>
 
@@ -67,7 +68,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="w-12 h-12 flex items-center justify-center bg-surface border border-border rounded-lg text-zinc-400 transition-all duration-300 hover:text-zinc-50 hover:border-accent-1 hover:-translate-y-1 gradient-subtle"
+                className="w-12 h-12 flex items-center justify-center bg-surface border border-border rounded-lg text-neutral-400 transition-all duration-300 hover:text-white hover:border-white/20 hover:-translate-y-1"
               >
                 <social.icon className="w-5 h-5" />
               </a>

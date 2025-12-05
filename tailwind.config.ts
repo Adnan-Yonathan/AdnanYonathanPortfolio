@@ -10,19 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          DEFAULT: '#0a0a0b',
-          secondary: '#111113',
-          tertiary: '#18181b',
+          DEFAULT: '#000000',
+          secondary: '#0a0a0a',
+          tertiary: '#141414',
         },
-        surface: '#1c1c1f',
+        surface: '#1a1a1a',
         border: {
-          DEFAULT: '#27272a',
-          light: '#3f3f46',
+          DEFAULT: '#262626',
+          light: '#404040',
         },
         accent: {
-          1: '#6366f1',
-          2: '#8b5cf6',
-          3: '#a855f7',
+          1: '#ffffff',
+          2: '#e5e5e5',
+          3: '#a3a3a3',
         },
       },
       fontFamily: {

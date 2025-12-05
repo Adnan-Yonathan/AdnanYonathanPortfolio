@@ -7,27 +7,27 @@ import { useRef } from 'react'
 const ventures = [
   {
     number: '01',
-    title: 'Local Marketing Agency',
+    title: 'AI Consulting for Law Firms',
     description:
-      'Helping local businesses grow their online presence and acquire customers through digital marketing strategies.',
+      'Helping law firms integrate AI and automation into their workflows. Focused on document processing, client intake, and operational efficiency.',
   },
   {
     number: '02',
-    title: 'AI Consulting for Law Firms',
+    title: 'Local Marketing Agency',
     description:
-      'Helping law firms leverage AI and automation to streamline operations, improve efficiency, and deliver better client outcomes.',
+      'Digital marketing and customer acquisition for local businesses. From SEO to paid ads, helping small businesses compete online.',
   },
   {
     number: '03',
-    title: 'Content Creation',
+    title: 'Content & Community',
     description:
-      'YouTube channels and social media content focused on app development, entrepreneurship, and building in public.',
+      'Building in public on YouTube and Twitter. Documenting the journey and teaching others how to build and ship products.',
   },
   {
     number: '04',
-    title: 'Sports Analytics',
+    title: 'Sports Analytics R&D',
     description:
-      'Building AI-powered prediction systems and analytics tools for the sports betting industry.',
+      'Researching and developing predictive models for sports betting. The foundation for Delta AI\'s intelligence layer.',
   },
 ]
 
@@ -45,13 +45,13 @@ export default function Ventures() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-semibold text-accent-1 uppercase tracking-wider">
-            Ventures
+          <span className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">
+            Active Ventures
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-            Companies &
+            Revenue streams &
             <br />
-            <span className="gradient-text">initiatives I run.</span>
+            <span className="gradient-text">active experiments.</span>
           </h2>
         </motion.div>
 
@@ -63,16 +63,16 @@ export default function Ventures() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className="relative p-8 bg-surface border border-border rounded-xl transition-all duration-300 hover:border-border-light hover:-translate-y-1 group overflow-hidden"
+              className="relative p-8 bg-surface border border-border rounded-xl transition-all duration-300 hover:border-white/20 hover:-translate-y-1 group overflow-hidden"
             >
-              {/* Left gradient line on hover */}
-              <div className="absolute top-0 left-0 w-1 h-full gradient-bg opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Left line on hover */}
+              <div className="absolute top-0 left-0 w-1 h-full bg-white opacity-0 group-hover:opacity-100 transition-opacity" />
 
-              <span className="text-sm font-bold text-accent-1 mb-4 block">
+              <span className="text-sm font-bold text-neutral-500 mb-4 block">
                 {venture.number}
               </span>
               <h3 className="text-xl font-semibold mb-3">{venture.title}</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">
+              <p className="text-sm text-neutral-400 leading-relaxed">
                 {venture.description}
               </p>
             </motion.div>
