@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import AnimatedCounter from './AnimatedCounter'
 
 export default function Hero() {
   return (
@@ -91,24 +90,24 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white">
-              <AnimatedCounter target={10} />+
+            <div className="text-2xl md:text-3xl font-bold text-white">
+              Serial
             </div>
-            <div className="text-sm text-neutral-500 mt-1">Products Shipped</div>
+            <div className="text-sm text-neutral-500 mt-1">Entrepreneur</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white">
-              <AnimatedCounter target={5} />
+            <div className="text-2xl md:text-3xl font-bold text-white">
+              1
             </div>
-            <div className="text-sm text-neutral-500 mt-1">Active Ventures</div>
+            <div className="text-sm text-neutral-500 mt-1">Focus</div>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white">
-              <AnimatedCounter target={1} />
+            <div className="text-2xl md:text-3xl font-bold text-white">
+              Unlimited
             </div>
-            <div className="text-sm text-neutral-500 mt-1">Year to Go Pro</div>
+            <div className="text-sm text-neutral-500 mt-1">Determination</div>
           </div>
         </motion.div>
       </div>
